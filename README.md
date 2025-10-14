@@ -6,10 +6,10 @@
 
 <p>
   <a href="https://github.com/antonrh/anydi_django/actions/workflows/ci.yml" target="_blank">
-    <img src="https://github.com/antonrh/anydi_django/actions/workflows/ci.yml/badge.svg" alt="Build Status">
+    <img src="https://github.com/antonrh/anydi-django/actions/workflows/ci.yml/badge.svg" alt="Build Status">
   </a>
-  <a href="https://codecov.io/gh/antonrh/anydi_django" target="_blank">
-    <img src="https://codecov.io/gh/antonrh/anydi_django/branch/main/graph/badge.svg?token=67CLD19I0C" alt="Coverage Status">
+  <a href="https://codecov.io/gh/antonrh/anydi-django" target="_blank">
+    <img src="https://codecov.io/gh/antonrh/anydi-django/branch/main/graph/badge.svg?token=67CLD19I0C" alt="Coverage Status">
   </a>
   <a href="https://anydi.readthedocs.io/en/stable/extensions/django/?badge=latest" target="_blank">
     <img src="https://anydi.readthedocs.io/en/stable/extensions/django/badge/?version=latest" alt="Documentation Status">

@@ -23,9 +23,9 @@ jobs:
       - name: Set up Python
         run: uv python install
       - name: Install dependencies
-        run: uv sync --all-groups --dev
+        run: uv sync --all-extras --dev
       - name: Static type checking
-        run: uv run pyright
+        run: uv run mypy
       - name: Code formatting
         run: uv run ruff check && uv run ruff format --check
 
@@ -51,7 +51,7 @@ jobs:
           python-version: ${{ matrix.python-version }}
           enable-cache: true
       - name: Install dependencies
-        run: uv sync --all-groups --dev
+        run: uv sync --all-extras --dev
       - name: Run tests
         run: |
           uv run pytest -vv tests --cov=anydi_django -p no:anydi
