@@ -1,0 +1,93 @@
+[project]
+name = "anydi-django"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "anydi>=0.50.0",
+    "django>=4.2",
+    "mypy[faster-cache]>=1.18.2",
+    "pytest-cov>=7.0.0",
+]
+
+[dependency-groups]
+dev = [
+    "django-stubs>=5.2.7",
+    "pyright[nodejs]>=1.1.406",
+    "pytest>=8.4.2",
+    "pytest-django>=4.11.1",
+    "ruff>=0.14.0",
+]
+ninja = [
+    "django-ninja>=1.1.0,<2",
+]
+
+[build-system]
+requires = ["uv_build>=0.8.17,<0.9.0"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "anydi_django"
+module-root = "."
+
+[tool.ruff]
+line-length = 88
+target-version = "py310"
+include = [
+    "anydi_django/**/*.py",
+    "tests/**/*.py",
+]
+
+[tool.ruff.lint]
+select = ["A", "B", "C", "E", "F", "I", "W", "TID252", "T20", "UP", "FURB", "PT"]
+ignore = ["B008", "B009"]
+
+[tool.ruff.lint.isort]
+combine-as-imports = true
+forced-separate = ["tests"]
+
+[tool.mypy]
+python_version = "3.10"
+strict = true
+pretty = true
+color_output = true
+show_error_codes = true
+files = [
+    "anydi_django/**/*.py",
+    "tests/**/*.py",
+]
+plugins = ["mypy_django_plugin.main"]
+
+[tool.django-stubs]
+django_settings_module = "tests.settings"
+
+[tool.pytest.ini_options]
+addopts = [
+    "--strict-config",
+    "--strict-markers",
+]
+xfail_strict = true
+junit_family = "xunit2"
+DJANGO_SETTINGS_MODULE = "tests.settings"
+
+[tool.coverage.report]
+exclude_also = [
+    "pragma: no cover",
+    "@abstractmethod",
+    "@abc.abstractmethod",
+    "if TYPE_CHECKING",
+    "if t.TYPE_CHECKING",
+    "@overload",
+    "@t.overload",
+    "raise NotImplementedError",
+    "except ImportError:",
+    "if has_signature_eval_str_arg",
+    "if not anyio:",
+]
+
+[tool.coverage.run]
+omit = [
+    "anydi_django/ninja/_operation.py",
+    "anydi_django/ninja/_signature.py",
+]
