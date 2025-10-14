@@ -36,12 +36,14 @@ Full documentation is available here:
 
 ## ⚙️ Installation
 
-```bash
-pip install anydi[django]
-```
-
-or 
+Install `AnyDI` for `Django`:
 
 ```bash
 pip install anydi-django
+```
+
+Or install with Django Ninja integration:
+
+```bash
+pip install anydi-django[ninja]
 ```
