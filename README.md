@@ -1,22 +1,13 @@
 # AnyDI Django
 
-<section align="center">
+<div style="text-align: center;">
 
-<i>AnyDI Django extension.</i>
+AnyDI Django extension.
 
-<p>
-  <a href="https://github.com/antonrh/anydi_django/actions/workflows/ci.yml" target="_blank">
-    <img src="https://github.com/antonrh/anydi-django/actions/workflows/ci.yml/badge.svg" alt="Build Status">
-  </a>
-  <a href="https://codecov.io/gh/antonrh/anydi-django" target="_blank">
-    <img src="https://codecov.io/gh/antonrh/anydi-django/branch/main/graph/badge.svg?token=67CLD19I0C" alt="Coverage Status">
-  </a>
-  <a href="https://anydi.readthedocs.io/en/stable/extensions/django/?badge=latest" target="_blank">
-    <img src="https://anydi.readthedocs.io/en/stable/extensions/django/badge/?version=latest" alt="Documentation Status">
-  </a>
-</p>
+[![CI](https://github.com/antonrh/anydi-django/actions/workflows/ci.yml/badge.svg)](https://github.com/antonrh/anydi/actions/workflows/ci.yml)
+[![Coverage](https://codecov.io/gh/antonrh/anydi-django/branch/main/graph/badge.svg)](https://codecov.io/gh/antonrh/anydi)
 
-</section>
+</div>
 
 ---
 
