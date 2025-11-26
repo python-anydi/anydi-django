@@ -4,7 +4,7 @@ import inspect
 from collections.abc import Callable
 from typing import Any
 
-from anydi._typing import is_inject_marker  # noqa
+from anydi._types import is_inject_marker  # noqa
 from django.http import HttpResponse
 from ninja.signature.details import (
     FuncParam,  # noqa
