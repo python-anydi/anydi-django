@@ -13,16 +13,16 @@ wheels = [
 
 [[package]]
 name = "anydi"
-version = "0.52.0"
+version = "0.56.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "anyio" },
     { name = "typing-extensions" },
     { name = "wrapt" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/3c/be/4e9444bcf11601bc92637c3e621bf9e2e6da20664cad616003ef707f4128/anydi-0.52.0.tar.gz", hash = "sha256:001cbfa33abb866b5f2e1cd1b7d35baf8b192149f607738f99475016cd07743a", size = 17957, upload-time = "2025-10-14T17:53:40.641Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/94/cb/9709fde06429e2314bebb778d0db50703d0cb8e441d9ad075fa590dc864b/anydi-0.56.0.tar.gz", hash = "sha256:f7b59b71148370e43aa408af0e5b3eaddb7792e1b7dcc466d8417f178e22178a", size = 20407, upload-time = "2025-11-26T19:47:54.764Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/0b/7b/61a927aef9cbfcdfff833cf89046f75bf2f481e3e9274055d0676f3088e0/anydi-0.52.0-py3-none-any.whl", hash = "sha256:b4aa2dbec260442ac0cd866bf8f9bb772c613e544071dde1de416931402b16af", size = 24238, upload-time = "2025-10-14T17:53:39.206Z" },
+    { url = "https://files.pythonhosted.org/packages/07/d2/5bcbf05fd4f9b625b7a7816930a5e083db07517036512f0ced6531deabfe/anydi-0.56.0-py3-none-any.whl", hash = "sha256:58ca0741991412c2a99cd9e43825a5bd419c382ab2dd8da100dfe95acde99689", size = 26756, upload-time = "2025-11-26T19:47:53.456Z" },
 ]
 
 [[package]]
@@ -52,7 +52,7 @@ dev = [
 
 [package.metadata]
 requires-dist = [
-    { name = "anydi", specifier = ">=0.52.0" },
+    { name = "anydi", specifier = ">=0.56.0" },
     { name = "django", specifier = ">=4.2" },
     { name = "django-ninja", marker = "extra == 'ninja'", specifier = ">=1.1.0,<2" },
 ]
