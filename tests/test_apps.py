@@ -3,9 +3,7 @@ from __future__ import annotations
 import importlib
 
 import anydi
-import pytest
 from django.conf import settings as django_settings
-from django.core.exceptions import ImproperlyConfigured
 from django.test import override_settings
 
 from anydi_django.apps import ContainerConfig
@@ -48,16 +46,3 @@ def test_container_factory_callable_returns_container() -> None:
         config = _make_config()
 
     assert config.container is factories.CALLABLE_CONTAINER
-
-
-def test_container_factory_callable_must_return_container() -> None:
-    with override_settings(
-        ANYDI={
-            **django_settings.ANYDI,
-            "CONTAINER_FACTORY": "tests.factories.bad_container_factory",
-        }
-    ):
-        with pytest.raises(
-            ImproperlyConfigured, match="must return an anydi.Container"
-        ):
-            _make_config()

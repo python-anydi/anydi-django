@@ -1,10 +1,9 @@
 from __future__ import annotations
 
 import types
-from collections.abc import Callable
-from typing import cast
 
 import anydi
+from anydi._container import import_container
 from django.apps import AppConfig
 from django.conf import settings
 from django.core.exceptions import ImproperlyConfigured
@@ -25,32 +24,16 @@ class ContainerConfig(AppConfig):
 
     def _make_container(self) -> anydi.Container:
         """Create the AnyDI container configured for this app."""
-        container_factory_path = self.settings["CONTAINER_FACTORY"]
-        if not container_factory_path:
+        container_path = self.settings["CONTAINER_FACTORY"]
+        if not container_path:
             return anydi.Container()
 
         try:
-            factory = import_string(container_factory_path)
+            return import_container(container_path)
         except ImportError as exc:
             raise ImproperlyConfigured(
-                f"Cannot import container factory '{container_factory_path}'."
+                f"Cannot import container factory '{container_path}'."
             ) from exc
-
-        if isinstance(factory, anydi.Container):
-            return factory
-
-        if callable(factory):
-            container = cast(Callable[[], anydi.Container], factory)()
-            if not isinstance(container, anydi.Container):
-                raise ImproperlyConfigured(
-                    f"Container factory '{container_factory_path}' must return an "
-                    "anydi.Container instance."
-                )
-            return container
-
-        raise ImproperlyConfigured(
-            f"Cannot import container factory '{container_factory_path}'."
-        )
 
     def ready(self) -> None:  # noqa: C901
         # Register Django settings
