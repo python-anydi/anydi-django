@@ -45,7 +45,7 @@ class ViewSignature(BaseViewSignature):
                 self.response_arg = name
                 continue
 
-            interface, should_inject = container.validate_injected_parameter(
+            interface, should_inject, _ = container.validate_injected_parameter(
                 arg, call=self.view_func
             )
             if should_inject:
