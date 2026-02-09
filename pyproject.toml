@@ -9,6 +9,9 @@ dependencies = [
     "django>=4.2",
 ]
 
+[project.urls]
+Repository = "https://github.com/python-anydi/anydi-django"
+
 [dependency-groups]
 dev = [
     "ruff>=0.14.0",

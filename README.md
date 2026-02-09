@@ -4,8 +4,8 @@
 
 AnyDI Django extension.
 
-[![CI](https://github.com/antonrh/anydi-django/actions/workflows/ci.yml/badge.svg)](https://github.com/antonrh/anydi/actions/workflows/ci.yml)
-[![Coverage](https://codecov.io/gh/antonrh/anydi-django/branch/main/graph/badge.svg)](https://codecov.io/gh/antonrh/anydi)
+[![CI](https://github.com/python-anydi/anydi-django/actions/workflows/ci.yml/badge.svg)](https://github.com/python-anydi/anydi/actions/workflows/ci.yml)
+[![Coverage](https://codecov.io/gh/python-anydi/anydi-django/branch/main/graph/badge.svg)](https://codecov.io/gh/python-anydi/anydi)
 
 </div>
 
@@ -13,7 +13,7 @@ AnyDI Django extension.
 
 ## 📘 Overview
 
-**AnyDI Django** is an official extension for integrating [AnyDI](https://github.com/antonrh/anydi) — a lightweight dependency injection framework — into Django projects.
+**AnyDI Django** is an official extension for integrating [AnyDI](https://github.com/python-anydi/anydi) — a lightweight dependency injection framework — into Django projects.
 
 ---
 
